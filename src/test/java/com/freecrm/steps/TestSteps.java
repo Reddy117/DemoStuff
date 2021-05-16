@@ -4,12 +4,16 @@ import org.openqa.selenium.By;
 
 import com.freecrm.base.BaseClass;
 
-import cucumber.api.PendingException;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 
 public class TestSteps extends BaseClass{
 
+@After
+public void close() {
+	System.out.println("Closed");
+}
 
 @Given("^User opens browser$")
 public void user_opens_browser() throws Throwable {
